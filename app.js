@@ -52,7 +52,7 @@
       byId('progress-fill').style.width = `${Math.min(received / target * 100, 100)}%`;
     }
     byId('progress-tax').hidden = isPending;
-    byId('progress-tax').textContent = isPending ? '' : `После вычета 5% налогов — ${money(Math.round(received * 0.95))}. Комиссия Kaspi вычитается отдельно.`;
+    byId('progress-tax').textContent = isPending ? '' : `После вычета 3% налогов — ${money(Math.round(received * 0.97))}. Комиссия Kaspi вычитается отдельно.`;
     byId('progress-note').textContent = `${isStale && !isEnded ? 'Обновление задерживается. ' : ''}${updatedAt ? `Сверено ${dateTime(updatedAt)} (Алматы). ` : ''}Сумму и шкалу сбора обновляем вручную раз в сутки.`;
     primary.hidden = isEnded;
     byId('hero-result').hidden = !isEnded;
